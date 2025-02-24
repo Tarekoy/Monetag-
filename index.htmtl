@@ -103,7 +103,7 @@ button:hover {
         <button class="youtube-btn" onclick="openYouTube()">YouTube</button>
 
         <div class="referral">
-            <p>Invite & Earn 2 Taka per referral!</p>
+            <p>Invite & Earn  Taka per referral!</p>
             <input type="text" id="referralLink" readonly>
             <button onclick="copyReferral()">Copy Link</button>
         </div>
@@ -118,9 +118,9 @@ button:hover {
         localStorage.setItem("userId", userId);
 
         const TELEGRAM_BOT_TOKEN = "8027805011:AAHNnRgy-ir09oHN3uSsWYSLS7NyO6ZyJhU";
-        const TELEGRAM_CHAT_ID = "@Tarekff5k";
+        const TELEGRAM_CHAT_ID = "@Monetagadminbot";
 
-        document.getElementById("referralLink").value = window.location.origin + "?ref=" + userId;
+        document.getElementById("referralLink").value = `https://t.me/${TELEGRAM_CHAT_ID}?start=${userId}`;
 
         function copyReferral() {
             let copyText = document.getElementById("referralLink");
@@ -143,8 +143,8 @@ button:hover {
         document.getElementById("watchAd").addEventListener("click", function() {
             if (typeof show_8982453 === "function") { 
                 show_8982453().then(() => {
-                    updateBalance(1); // **এড দেখলে ১ টাকা পাবে**
-                    alert("Ad viewed! You earned 1 Taka.");
+                    updateBalance(0.5); // **এড দেখলে ০.৫ টাকা পাবে**
+                    alert("Ad viewed! You earned 0.5 Taka.");
                 }).catch(err => {
                     alert("Ad failed to load.");
                 });
@@ -190,9 +190,9 @@ button:hover {
         const referrer = urlParams.get("ref");
 
         if (referrer && !localStorage.getItem("referred")) {
-            updateBalance(2); // **রেফার করলে ২ টাকা পাবে**
+            updateBalance(); // **রেফার করলে  টাকা পাবে**
             localStorage.setItem("referred", "true");
-            alert("You joined using a referral link! You got 2 Taka.");
+            alert("You joined using a referral link! You got  Taka.");
         }
 
         // Additional Button Functions
@@ -211,5 +211,5 @@ button:hover {
         checkWithdraw();
     </script>
 
-</body>
-    </html>
+</body> withdraw 100 BDT
+    </html> free income tips Bangla 
